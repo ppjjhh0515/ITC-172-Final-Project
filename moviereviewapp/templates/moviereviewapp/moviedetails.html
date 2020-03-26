@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ mov.moviename }}</h2>
+<p>Genre: {{ mov.movietype }} </p>
+<p>Added by: {{ mov.user }} </p>
+<p>Price: {{ mov.movieprice }}</p>
+<p>Available from: {{ mov.movieentrydate }}</p>
+<p>URL: {{ mov.movieurl }}</p>
+<p>Description: {{ mov.moviedescription }}</p>
+
+<h3>Reviews</h3>
+{% for r in reviews %}
+<h4>{{ r.reviewtitle }}</h4>
+<p>{{ r.reviewdate }}</p>
+<p>{{ r.reviewrating }}</p>
+<p>{{ r.reviewtext }}</p>
+
+{% endfor %}
+
+
+{% endblock %}
